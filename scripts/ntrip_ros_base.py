@@ -75,7 +75,7 @@ class NTRIPRosBase(Node):
       self.get_logger().fatal('The RTCM package {} is not a valid option. Please choose between the following packages {}'.format(rtcm_message_package, ','.join([_MAVROS_MSGS_NAME, _RTCM_MSGS_NAME])))
 
     # Setup the RTCM publisher
-    self._rtcm_pub = self.create_publisher(self._rtcm_message_type, 'rtcm', 10)
+    self._rtcm_pub = self.create_publisher(self._rtcm_message_type, 'ntrip_client/rtcm', 10)
 
     # Initialize the client
     self._client = NTRIPBase(
